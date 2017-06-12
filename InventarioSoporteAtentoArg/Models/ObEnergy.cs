@@ -9,7 +9,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class ObEnergy
     {
         [Key]
-        public int IdObEnergy { get; set; }
+        public int ObEnergyID { get; set; }
         public string Description { get; set; }
         public string EtiquetteAtento { get; set; }
         public string SerialNumber { get; set; }

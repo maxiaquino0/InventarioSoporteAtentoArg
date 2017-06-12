@@ -9,7 +9,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class ObDisplay
     {
         [Key]
-        public int IdObDisplay { get; set; }
+        public int ObDisplayID { get; set; }
         public string Description { get; set; }
         public string EtiquetteAtento { get; set; }
         public string SerialNumber { get; set; }

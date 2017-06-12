@@ -9,7 +9,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class ObPhone
     {
         [Key]
-        public int IdObPhone { get; set; }
+        public int ObPhoneID { get; set; }
         public string Description { get; set; }
         public string EtiquetteAtento { get; set; }
         public string SerialNumber { get; set; }

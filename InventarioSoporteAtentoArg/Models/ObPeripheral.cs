@@ -9,7 +9,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class ObPeripheral
     {
         [Key]
-        public int IdObPeripheral { get; set; }
+        public int ObPeripheralID { get; set; }
         public string Description { get; set; }
         public string EtiquetteAtento { get; set; }
         public string SerialNumber { get; set; }

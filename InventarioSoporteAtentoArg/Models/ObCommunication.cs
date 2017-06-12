@@ -5,7 +5,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class ObCommunication
     {
         [Key]
-        public int IdObCommunication { get; set; }
+        public int ObCommunicationID { get; set; }
         public string Description { get; set; }
         public string EtiquetteAtento { get; set; }
         public string SerialNumber { get; set; }

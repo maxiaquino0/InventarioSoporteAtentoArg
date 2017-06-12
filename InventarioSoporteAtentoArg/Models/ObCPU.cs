@@ -9,7 +9,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class ObCPU
     {
         [Key]
-        public int IdObCPU { get; set; }
+        public int ObCPUID { get; set; }
         public string Description { get; set; }
         public string EtiquetteAtento { get; set; }
         public string SerialNumber { get; set; }
