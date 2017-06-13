@@ -46,7 +46,7 @@ namespace InventarioSoporteAtentoArg.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdFloor,Description")] Floor floor)
+        public ActionResult Create([Bind(Include = "FloorID,Description")] Floor floor)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace InventarioSoporteAtentoArg.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdFloor,Description")] Floor floor)
+        public ActionResult Edit([Bind(Include = "FloorID,Description")] Floor floor)
         {
             if (ModelState.IsValid)
             {

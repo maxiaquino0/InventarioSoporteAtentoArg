@@ -10,112 +10,107 @@ using InventarioSoporteAtentoArg.Models;
 
 namespace InventarioSoporteAtentoArg.Controllers
 {
-    public class RoomsController : Controller
+    public class PlatformsController : Controller
     {
         private InventarioSoporteAtentoArgContext db = new InventarioSoporteAtentoArgContext();
 
-        // GET: Rooms
+        // GET: Platforms
         public ActionResult Index()
         {
-            var rooms = db.Rooms.Include(r => r.Platform);
-            return View(rooms.ToList());
+            return View(db.Platforms.ToList());
         }
 
-        // GET: Rooms/Details/5
+        // GET: Platforms/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Room room = db.Rooms.Find(id);
-            if (room == null)
+            Platform platform = db.Platforms.Find(id);
+            if (platform == null)
             {
                 return HttpNotFound();
             }
-            return View(room);
+            return View(platform);
         }
 
-        // GET: Rooms/Create
+        // GET: Platforms/Create
         public ActionResult Create()
         {
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name");
             return View();
         }
 
-        // POST: Rooms/Create
+        // POST: Platforms/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RoomID,Description,PlatformID")] Room room)
+        public ActionResult Create([Bind(Include = "PlatformID,Name")] Platform platform)
         {
             if (ModelState.IsValid)
             {
-                db.Rooms.Add(room);
+                db.Platforms.Add(platform);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", room.PlatformID);
-            return View(room);
+            return View(platform);
         }
 
-        // GET: Rooms/Edit/5
+        // GET: Platforms/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Room room = db.Rooms.Find(id);
-            if (room == null)
+            Platform platform = db.Platforms.Find(id);
+            if (platform == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", room.PlatformID);
-            return View(room);
+            return View(platform);
         }
 
-        // POST: Rooms/Edit/5
+        // POST: Platforms/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RoomID,Description,PlatformID")] Room room)
+        public ActionResult Edit([Bind(Include = "PlatformID,Name")] Platform platform)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(room).State = EntityState.Modified;
+                db.Entry(platform).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", room.PlatformID);
-            return View(room);
+            return View(platform);
         }
 
-        // GET: Rooms/Delete/5
+        // GET: Platforms/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Room room = db.Rooms.Find(id);
-            if (room == null)
+            Platform platform = db.Platforms.Find(id);
+            if (platform == null)
             {
                 return HttpNotFound();
             }
-            return View(room);
+            return View(platform);
         }
 
-        // POST: Rooms/Delete/5
+        // POST: Platforms/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Room room = db.Rooms.Find(id);
-            db.Rooms.Remove(room);
+            Platform platform = db.Platforms.Find(id);
+            db.Platforms.Remove(platform);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

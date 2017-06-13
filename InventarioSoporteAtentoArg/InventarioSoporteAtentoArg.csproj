@@ -209,6 +209,7 @@
     <Compile Include="Controllers\FloorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -297,6 +298,11 @@
     <Content Include="Views\Floors\Details.cshtml" />
     <Content Include="Views\Floors\Edit.cshtml" />
     <Content Include="Views\Floors\Index.cshtml" />
+    <Content Include="Views\Platforms\Create.cshtml" />
+    <Content Include="Views\Platforms\Delete.cshtml" />
+    <Content Include="Views\Platforms\Details.cshtml" />
+    <Content Include="Views\Platforms\Edit.cshtml" />
+    <Content Include="Views\Platforms\Index.cshtml" />
     <Content Include="Views\Rooms\Create.cshtml" />
     <Content Include="Views\Rooms\Delete.cshtml" />
     <Content Include="Views\Rooms\Details.cshtml" />
