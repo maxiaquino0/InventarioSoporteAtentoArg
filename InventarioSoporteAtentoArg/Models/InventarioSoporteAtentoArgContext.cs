@@ -24,5 +24,9 @@ namespace InventarioSoporteAtentoArg.Models
         public System.Data.Entity.DbSet<InventarioSoporteAtentoArg.Models.Room> Rooms { get; set; }
 
         public System.Data.Entity.DbSet<InventarioSoporteAtentoArg.Models.Platform> Platforms { get; set; }
+
+        public System.Data.Entity.DbSet<InventarioSoporteAtentoArg.Models.ObjectType> ObjectTypes { get; set; }
+
+        public System.Data.Entity.DbSet<InventarioSoporteAtentoArg.Models.InventaryObject> InventaryObjects { get; set; }
     }
 }

@@ -208,7 +208,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FloorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventaryObjectsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ObjectTypesController.cs" />
     <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,14 +221,9 @@
     <Compile Include="Models\Floor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InventarioSoporteAtentoArgContext.cs" />
+    <Compile Include="Models\InventaryObject.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ObCommunication.cs" />
-    <Compile Include="Models\ObCPU.cs" />
-    <Compile Include="Models\ObDisplay.cs" />
-    <Compile Include="Models\ObEnergy.cs" />
-    <Compile Include="Models\ObPeripheral.cs" />
-    <Compile Include="Models\ObPhone.cs" />
-    <Compile Include="Models\ObServer.cs" />
+    <Compile Include="Models\ObjectType.cs" />
     <Compile Include="Models\Platform.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -308,6 +305,16 @@
     <Content Include="Views\Rooms\Details.cshtml" />
     <Content Include="Views\Rooms\Edit.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
+    <Content Include="Views\ObjectTypes\Create.cshtml" />
+    <Content Include="Views\ObjectTypes\Delete.cshtml" />
+    <Content Include="Views\ObjectTypes\Details.cshtml" />
+    <Content Include="Views\ObjectTypes\Edit.cshtml" />
+    <Content Include="Views\ObjectTypes\Index.cshtml" />
+    <Content Include="Views\InventaryObjects\Create.cshtml" />
+    <Content Include="Views\InventaryObjects\Delete.cshtml" />
+    <Content Include="Views\InventaryObjects\Details.cshtml" />
+    <Content Include="Views\InventaryObjects\Edit.cshtml" />
+    <Content Include="Views\InventaryObjects\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

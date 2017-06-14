@@ -1,0 +1,99 @@
+﻿@model IEnumerable<InventarioSoporteAtentoArg.Models.InventaryObject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ObjectType.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EtiquetteAtento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Extension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityRam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityHDD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelProcessor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeedProcessor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObjectType.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EtiquetteAtento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SerialNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Extension)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantityRam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantityHDD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelProcessor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpeedProcessor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InventaryObjectID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InventaryObjectID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InventaryObjectID })
+        </td>
+    </tr>
+}
+
+</table>
