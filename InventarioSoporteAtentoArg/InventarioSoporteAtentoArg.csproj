@@ -222,6 +222,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InventarioSoporteAtentoArgContext.cs" />
     <Compile Include="Models\InventaryObject.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ObjectType.cs" />
     <Compile Include="Models\Platform.cs" />

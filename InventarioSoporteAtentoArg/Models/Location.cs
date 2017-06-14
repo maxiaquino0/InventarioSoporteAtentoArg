@@ -14,7 +14,7 @@ namespace InventarioSoporteAtentoArg.Models
         public int FloorID { get; set; }
         public int RoomID { get; set; }
         public string PositionIT { get; set; }
-        public int ObjectID { get; set; }
+        public string Desk { get; set; }
 
         public virtual Platform Platform { get; set; }
         public virtual Floor Floor { get; set; }
