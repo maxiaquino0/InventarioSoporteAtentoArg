@@ -227,6 +227,7 @@
     <Compile Include="Models\ObjectType.cs" />
     <Compile Include="Models\Platform.cs" />
     <Compile Include="Models\Room.cs" />
+    <Compile Include="ModelViews\LocationView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

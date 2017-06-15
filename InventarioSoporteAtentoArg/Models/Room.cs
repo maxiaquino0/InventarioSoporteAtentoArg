@@ -10,7 +10,11 @@ namespace InventarioSoporteAtentoArg.Models
     {
         [Key]
         public int RoomID { get; set; }
+
+        [Display(Name ="Nombre de Sala/Oficina")]
         public string Description { get; set; }
+
+        [Display(Name ="Nombre de Plataforma")]
         public int PlatformID { get; set; }
 
         public virtual Platform Platform { get; set; }

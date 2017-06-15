@@ -10,6 +10,8 @@ namespace InventarioSoporteAtentoArg.Models
     {
         [Key]
         public int objectTypeID { get; set; }
+
+        [Display(Name ="Tipo de Objeto")]
         public string Description { get; set; }
 
         public virtual ICollection<InventaryObject> InventaryObjects { get; set; }

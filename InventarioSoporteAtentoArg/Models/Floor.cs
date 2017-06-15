@@ -10,6 +10,8 @@ namespace InventarioSoporteAtentoArg.Models
     {
         [Key]
         public int FloorID { get; set; }
+
+        [Display(Name ="Piso")]
         public string Description { get; set; }
     }
 }
