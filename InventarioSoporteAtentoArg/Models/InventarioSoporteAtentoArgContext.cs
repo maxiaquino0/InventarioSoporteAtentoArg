@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -17,6 +18,12 @@ namespace InventarioSoporteAtentoArg.Models
     
         public InventarioSoporteAtentoArgContext() : base("name=InventarioSoporteAtentoArgContext")
         {
+        }
+
+        //sobreescribo el metodo para que no se produzca borrado en cascada
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
         public System.Data.Entity.DbSet<InventarioSoporteAtentoArg.Models.Floor> Floors { get; set; }
