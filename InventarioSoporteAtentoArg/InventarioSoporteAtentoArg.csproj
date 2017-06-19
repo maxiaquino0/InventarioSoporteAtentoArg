@@ -209,6 +209,7 @@
     <Compile Include="Controllers\FloorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventaryObjectsController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ObjectTypesController.cs" />
     <Compile Include="Controllers\PlatformsController.cs" />
@@ -227,7 +228,6 @@
     <Compile Include="Models\ObjectType.cs" />
     <Compile Include="Models\Platform.cs" />
     <Compile Include="Models\Room.cs" />
-    <Compile Include="ModelViews\LocationView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -317,6 +317,11 @@
     <Content Include="Views\InventaryObjects\Details.cshtml" />
     <Content Include="Views\InventaryObjects\Edit.cshtml" />
     <Content Include="Views\InventaryObjects\Index.cshtml" />
+    <Content Include="Views\Locations\Create.cshtml" />
+    <Content Include="Views\Locations\Delete.cshtml" />
+    <Content Include="Views\Locations\Details.cshtml" />
+    <Content Include="Views\Locations\Edit.cshtml" />
+    <Content Include="Views\Locations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

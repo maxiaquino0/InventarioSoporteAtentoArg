@@ -18,5 +18,6 @@ namespace InventarioSoporteAtentoArg.Models
         public int PlatformID { get; set; }
 
         public virtual Platform Platform { get; set; }
+        public virtual ICollection<Location> Locations { get; set; }
     }
 }

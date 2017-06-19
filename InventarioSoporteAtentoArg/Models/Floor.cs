@@ -13,5 +13,7 @@ namespace InventarioSoporteAtentoArg.Models
 
         [Display(Name ="Piso")]
         public string Description { get; set; }
+
+        public virtual ICollection<Location> Locations { get; set; }
     }
 }

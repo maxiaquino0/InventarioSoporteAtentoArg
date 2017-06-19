@@ -48,5 +48,6 @@ namespace InventarioSoporteAtentoArg.Models
         public string SpeedProcessor { get; set; }
 
         public virtual ObjectType ObjectType { get; set; }
+        public virtual ICollection<Location> Locations { get; set; }
     }
 }

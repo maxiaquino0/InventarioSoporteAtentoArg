@@ -1,0 +1,63 @@
+﻿@model IEnumerable<InventarioSoporteAtentoArg.Models.Location>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create", "", new { Class = "action add", title = "Nueva ubicacion" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Platform.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Room.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PositionIT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InventaryObject.EtiquetteAtento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Platform.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Room.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PositionIT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InventaryObject.EtiquetteAtento)
+        </td>
+        <td>
+            @Html.ActionLink("Mover", "Edit", new { id=item.LocationID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LocationID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.LocationID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,72 @@
+﻿@model InventarioSoporteAtentoArg.Models.Location
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.EtiquetteAtento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.EtiquetteAtento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Platform.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Platform.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desk)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

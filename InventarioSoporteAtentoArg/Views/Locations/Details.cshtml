@@ -1,0 +1,130 @@
+﻿@model InventarioSoporteAtentoArg.Models.Location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Platform.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Platform.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Floor.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionIT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PositionIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.EtiquetteAtento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.EtiquetteAtento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.SerialNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.SerialNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.Model)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.Observations)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.Observations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.Extension)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.Extension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.Owner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.QuantityRam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.QuantityRam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.QuantityHDD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.QuantityHDD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.ModelProcessor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.ModelProcessor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventaryObject.SpeedProcessor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventaryObject.SpeedProcessor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LocationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

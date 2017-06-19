@@ -15,5 +15,6 @@ namespace InventarioSoporteAtentoArg.Models
         public string Name { get; set; }
 
         public virtual ICollection<Room> Rooms { get; set; }
+        public virtual ICollection<Location> Locations { get; set; }
     }
 }
