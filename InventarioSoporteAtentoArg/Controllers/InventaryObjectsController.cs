@@ -39,7 +39,8 @@ namespace InventarioSoporteAtentoArg.Controllers
         // GET: InventaryObjects/Create
         public ActionResult Create()
         {
-            ViewBag.ObjectTypeID = new SelectList(db.ObjectTypes, "objectTypeID", "Description");
+            var list = Common.GetObjectTypes();
+            ViewBag.ObjectTypeID = new SelectList(list, "objectTypeID", "Description");
             return View();
         }
 
@@ -56,8 +57,8 @@ namespace InventarioSoporteAtentoArg.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.ObjectTypeID = new SelectList(db.ObjectTypes, "objectTypeID", "Description", inventaryObject.ObjectTypeID);
+            var list = Common.GetObjectTypes();
+            ViewBag.ObjectTypeID = new SelectList(list, "objectTypeID", "Description", inventaryObject.ObjectTypeID);
             return View(inventaryObject);
         }
 
@@ -73,7 +74,8 @@ namespace InventarioSoporteAtentoArg.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ObjectTypeID = new SelectList(db.ObjectTypes, "objectTypeID", "Description", inventaryObject.ObjectTypeID);
+            var list = Common.GetObjectTypes();
+            ViewBag.ObjectTypeID = new SelectList(list, "objectTypeID", "Description", inventaryObject.ObjectTypeID);
             return View(inventaryObject);
         }
 
@@ -90,6 +92,7 @@ namespace InventarioSoporteAtentoArg.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            var list = Common.GetObjectTypes();
             ViewBag.ObjectTypeID = new SelectList(db.ObjectTypes, "objectTypeID", "Description", inventaryObject.ObjectTypeID);
             return View(inventaryObject);
         }
@@ -128,5 +131,7 @@ namespace InventarioSoporteAtentoArg.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
     }
 }

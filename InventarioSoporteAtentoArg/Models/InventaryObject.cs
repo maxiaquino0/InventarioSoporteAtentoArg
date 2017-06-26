@@ -9,6 +9,7 @@ namespace InventarioSoporteAtentoArg.Models
     public class InventaryObject
     {
         [Key]
+        [Display(Name = "Etiqueta Atento")]
         public int InventaryObjectID { get; set; }
 
         [Display(Name = "Tipo de Objeto")]

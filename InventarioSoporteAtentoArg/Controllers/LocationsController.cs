@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using InventarioSoporteAtentoArg.Models;
 
+
 namespace InventarioSoporteAtentoArg.Controllers
 {
     public class LocationsController : Controller
@@ -35,14 +36,18 @@ namespace InventarioSoporteAtentoArg.Controllers
             }
             return View(location);
         }
-
+        
         // GET: Locations/Create
         public ActionResult Create()
         {
-            ViewBag.FloorID = new SelectList(db.Floors, "FloorID", "Description");
-            ViewBag.InventaryObjectID = new SelectList(db.InventaryObjects, "InventaryObjectID", "EtiquetteAtento");
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name");
-            ViewBag.RoomID = new SelectList(db.Rooms, "RoomID", "Description");
+            var listFloors = Common.GetFloors();   
+            ViewBag.FloorID = new SelectList(listFloors, "FloorID", "Description");
+            var listInventaryObjects = Common.GetInventaryObjects();
+            ViewBag.InventaryObjectID = new SelectList(listInventaryObjects, "InventaryObjectID", "EtiquetteAtento");
+            var listPlatforms = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(listPlatforms, "PlatformID", "Name");
+            var listRooms = Common.GetRooms();
+            ViewBag.RoomID = new SelectList(listRooms, "RoomID", "Description");
             return View();
         }
 
@@ -59,11 +64,14 @@ namespace InventarioSoporteAtentoArg.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.FloorID = new SelectList(db.Floors, "FloorID", "Description", location.FloorID);
-            ViewBag.InventaryObjectID = new SelectList(db.InventaryObjects, "InventaryObjectID", "EtiquetteAtento", location.InventaryObjectID);
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", location.PlatformID);
-            ViewBag.RoomID = new SelectList(db.Rooms, "RoomID", "Description", location.RoomID);
+            var listFloors = Common.GetFloors();
+            ViewBag.FloorID = new SelectList(listFloors, "FloorID", "Description", location.FloorID);
+            var listInventaryObjects = Common.GetInventaryObjects();
+            ViewBag.InventaryObjectID = new SelectList(listInventaryObjects, "InventaryObjectID", "EtiquetteAtento", location.InventaryObjectID);
+            var listPlatforms = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(listPlatforms, "PlatformID", "Name", location.PlatformID);
+            var listRooms = Common.GetRooms();
+            ViewBag.RoomID = new SelectList(listRooms, "RoomID", "Description", location.RoomID);
             return View(location);
         }
 
@@ -79,10 +87,14 @@ namespace InventarioSoporteAtentoArg.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.FloorID = new SelectList(db.Floors, "FloorID", "Description", location.FloorID);
-            ViewBag.InventaryObjectID = new SelectList(db.InventaryObjects, "InventaryObjectID", "EtiquetteAtento", location.InventaryObjectID);
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", location.PlatformID);
-            ViewBag.RoomID = new SelectList(db.Rooms, "RoomID", "Description", location.RoomID);
+            var listFloors = Common.GetFloors();
+            ViewBag.FloorID = new SelectList(listFloors, "FloorID", "Description", location.FloorID);
+            var listInventaryObjects = Common.GetInventaryObjects();
+            ViewBag.InventaryObjectID = new SelectList(listInventaryObjects, "InventaryObjectID", "EtiquetteAtento", location.InventaryObjectID);
+            var listPlatforms = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(listPlatforms, "PlatformID", "Name", location.PlatformID);
+            var listRooms = Common.GetRooms();
+            ViewBag.RoomID = new SelectList(listRooms, "RoomID", "Description", location.RoomID);
             return View(location);
         }
 
@@ -99,10 +111,14 @@ namespace InventarioSoporteAtentoArg.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.FloorID = new SelectList(db.Floors, "FloorID", "Description", location.FloorID);
-            ViewBag.InventaryObjectID = new SelectList(db.InventaryObjects, "InventaryObjectID", "EtiquetteAtento", location.InventaryObjectID);
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", location.PlatformID);
-            ViewBag.RoomID = new SelectList(db.Rooms, "RoomID", "Description", location.RoomID);
+            var listFloors = Common.GetFloors();
+            ViewBag.FloorID = new SelectList(listFloors, "FloorID", "Description", location.FloorID);
+            var listInventaryObjects = Common.GetInventaryObjects();
+            ViewBag.InventaryObjectID = new SelectList(listInventaryObjects, "InventaryObjectID", "EtiquetteAtento", location.InventaryObjectID);
+            var listPlatforms = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(listPlatforms, "PlatformID", "Name", location.PlatformID);
+            var listRooms = Common.GetRooms();
+            ViewBag.RoomID = new SelectList(listRooms, "RoomID", "Description", location.RoomID);
             return View(location);
         }
 

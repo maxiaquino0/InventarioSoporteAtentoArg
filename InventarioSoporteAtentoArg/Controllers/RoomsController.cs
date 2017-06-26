@@ -39,7 +39,8 @@ namespace InventarioSoporteAtentoArg.Controllers
         // GET: Rooms/Create
         public ActionResult Create()
         {
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name");
+            var list = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(list, "PlatformID", "Name");
             return View();
         }
 
@@ -56,8 +57,8 @@ namespace InventarioSoporteAtentoArg.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", room.PlatformID);
+            var list = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(list, "PlatformID", "Name", room.PlatformID);
             return View(room);
         }
 
@@ -73,7 +74,8 @@ namespace InventarioSoporteAtentoArg.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", room.PlatformID);
+            var list = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(list, "PlatformID", "Name", room.PlatformID);
             return View(room);
         }
 
@@ -90,7 +92,8 @@ namespace InventarioSoporteAtentoArg.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PlatformID = new SelectList(db.Platforms, "PlatformID", "Name", room.PlatformID);
+            var list = Common.GetPlatforms();
+            ViewBag.PlatformID = new SelectList(list, "PlatformID", "Name", room.PlatformID);
             return View(room);
         }
 
@@ -128,5 +131,7 @@ namespace InventarioSoporteAtentoArg.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
     }
 }

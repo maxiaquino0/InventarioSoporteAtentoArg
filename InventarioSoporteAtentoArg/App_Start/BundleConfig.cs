@@ -26,6 +26,9 @@ namespace InventarioSoporteAtentoArg
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //InventarySupport.js
+            bundles.Add(new ScriptBundle("~/bundles/inventarySupport").Include(
+                        "~/Scripts/InventarySupport.js"));
         }
     }
 }
