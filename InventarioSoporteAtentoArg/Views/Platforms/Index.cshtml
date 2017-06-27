@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<InventarioSoporteAtentoArg.Models.Platform>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inicio";
 }
 
-<h2>Index</h2>
+<h2>Inicio</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PlatformID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PlatformID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PlatformID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.PlatformID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.PlatformID }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.PlatformID })
         </td>
     </tr>
 }

@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<InventarioSoporteAtentoArg.Models.Location>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inicio";
 }
 
-<h2>Index</h2>
+<h2>Inicio</h2>
 
 <p>
-    @Html.ActionLink("Nuevo", "Create", "", new { Class = "action add", title = "Nueva ubicacion" })
+    @Html.ActionLink("Nuevo", "Create", "", new { Class = "action add", title = "Nueva ubicación" })
 </p>
 <table class="table">
     <tr>
@@ -55,7 +55,7 @@
         <td>
             @Html.ActionLink("Mover", "Edit", new { id=item.LocationID }) |
             @Html.ActionLink("Detalles", "Details", new { id=item.LocationID }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.LocationID })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LocationID })
         </td>
     </tr>
 }
