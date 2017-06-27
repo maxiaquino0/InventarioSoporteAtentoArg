@@ -24,8 +24,14 @@ namespace InventarioSoporteAtentoArg
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/less").Include(
+                      "~/Content/bootswatch.less",
+                      "~/Content/variables.less"));
+            bundles.Add(new StyleBundle("~/Content/scss").Include(
+                      "~/Content/_bootswatch.scss",
+                      "~/Content/_variables.scss"));
             //InventarySupport.js
             bundles.Add(new ScriptBundle("~/bundles/inventarySupport").Include(
                         "~/Scripts/InventarySupport.js"));

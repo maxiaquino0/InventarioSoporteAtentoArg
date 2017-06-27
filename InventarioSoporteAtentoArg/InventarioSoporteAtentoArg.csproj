@@ -247,6 +247,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Documents\2017 CHA Ilia.xlsx" />
+    <Content Include="Content\variables.less" />
+    <Content Include="Content\bootswatch.less" />
+    <Content Include="Content\_variables.scss" />
+    <Content Include="Content\_bootswatch.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\InventarySupport.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
