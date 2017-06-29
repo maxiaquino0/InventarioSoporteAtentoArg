@@ -2,7 +2,7 @@
     $('#ObjectTypeID').change(
             function () {
                 var objectType = $(this).find('option:selected').text();
-                if (objectType !== "CPU") {
+                if (objectType === "CPU") {
                     $('#SpeedProcessor').attr('disabled', false);
                     $('#ModelProcessor').attr('disabled', false);
                     $('#QuantityHDD').attr('disabled', false);

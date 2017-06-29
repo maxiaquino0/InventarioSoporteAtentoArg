@@ -20,6 +20,7 @@ namespace InventarioSoporteAtentoArg.Models
         [Display(Name ="Escritorio")]
         public string Desk { get; set; }
 
+        
         public int InventaryObjectID { get; set; }
 
         public virtual Platform Platform { get; set; }
