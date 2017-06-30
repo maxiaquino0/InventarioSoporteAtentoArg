@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Nuevo", "Create", new { }, new { @class = "btn btn-primary btn-sm" })
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.FloorID }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.FloorID }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.FloorID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.FloorID }, new { @class = "btn btn-primary btn-xs" })
+            @Html.ActionLink("Detalles", "Details", new { id=item.FloorID }, new { @class = "btn btn-info btn-xs" })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.FloorID }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }

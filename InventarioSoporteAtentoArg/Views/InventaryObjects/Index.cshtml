@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn btn-primary btn-sm" })
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ObjectType.Description)
@@ -47,7 +47,7 @@
         <th>
             @Html.DisplayNameFor(model => model.SpeedProcessor)
         </th>
-        <th></th>
+        <th width="50"></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -88,10 +88,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.SpeedProcessor)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.InventaryObjectID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.InventaryObjectID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.InventaryObjectID })
+        <td width="150">
+            @Html.ActionLink("Edit", "Edit", new { id=item.InventaryObjectID }, new { @class = "btn btn-primary btn-xs" })
+            @Html.ActionLink("Details", "Details", new { id=item.InventaryObjectID }, new { @class = "btn btn-info btn-xs" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.InventaryObjectID }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }

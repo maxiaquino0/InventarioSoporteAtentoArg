@@ -109,6 +109,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.InventaryObjectID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InventaryObjectID }, new { @class = "btn btn-primary btn-sm" }) |
+    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-default btn-sm" })
 </p>
