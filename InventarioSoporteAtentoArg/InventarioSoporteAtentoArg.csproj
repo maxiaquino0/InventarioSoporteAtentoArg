@@ -212,6 +212,7 @@
     <Compile Include="Controllers\InventaryObjectsController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ObjectTypesAPIController.cs" />
     <Compile Include="Controllers\ObjectTypesController.cs" />
     <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />

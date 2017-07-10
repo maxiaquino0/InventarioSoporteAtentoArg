@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace InventarioSoporteAtentoArg.Models
         [Display(Name ="Tipo de Objeto")]
         public string Description { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<InventaryObject> InventaryObjects { get; set; }
     }
 }

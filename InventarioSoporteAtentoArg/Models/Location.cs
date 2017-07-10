@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,9 +24,13 @@ namespace InventarioSoporteAtentoArg.Models
         
         public int InventaryObjectID { get; set; }
 
+        [JsonIgnore]
         public virtual Platform Platform { get; set; }
+        [JsonIgnore]
         public virtual Floor Floor { get; set; }
+        [JsonIgnore]
         public virtual Room Room { get; set; }
+        [JsonIgnore]
         public virtual InventaryObject InventaryObject { get; set; }
     }
 }

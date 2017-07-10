@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,7 +18,9 @@ namespace InventarioSoporteAtentoArg.Models
         [Display(Name ="Nombre de Plataforma")]
         public int PlatformID { get; set; }
 
+        [JsonIgnore]
         public virtual Platform Platform { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Location> Locations { get; set; }
     }
 }

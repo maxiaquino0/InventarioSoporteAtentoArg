@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -48,7 +49,9 @@ namespace InventarioSoporteAtentoArg.Models
         [Display(Name ="Velocidad Procesador")]
         public string SpeedProcessor { get; set; }
 
+        [JsonIgnore]
         public virtual ObjectType ObjectType { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Location> Locations { get; set; }
     }
 }
